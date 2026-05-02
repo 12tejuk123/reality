@@ -1,0 +1,405 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b1120;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.85);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.navbar h1 {
+    color: gold;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: gold;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    padding: 40px;
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: gold;
+    color: black;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: orange;
+}
+
+/* SECTION */
+.section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.section ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.section li {
+    margin: 8px 0;
+}
+
+/* CONTAINER */
+.container {
+    padding: 50px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: #111827;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* PRICE */
+.price {
+    color: gold;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.feature-box {
+    background: #111827;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    padding: 50px;
+    background: #020617;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: #aaa;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+/* LOADER */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #0b1120;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loader h1 {
+    color: gold;
+    font-size: 40px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* VIDEO BACKGROUND */
+.bg-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* FADE ANIMATION */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease;
+}
+
+.fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CARD HOVER ENHANCED */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+}
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #0b1120;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slides {
+    display: flex;
+    transition: 0.5s;
+}
+
+.slides img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: gold;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+.category-buttons {
+    margin-top: 20px;
+}
+
+.category-buttons .btn {
+    margin: 10px;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* R-ZONE */
+.rzone-btn {
+    background: linear-gradient(45deg, gold, orange);
+     color: black;  
+     align-items: center;
+}
+
+/* NA/RERA */
+.na-btn {
+    background: linear-gradient(45deg,gold, orange);
+    color: black;
+}
+
+/* HOVER */
+.category-buttons .btn:hover {
+    transform: scale(1.05);
+}
+html {
+    scroll-behavior: smooth;
+}
+.rzone-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.rzone-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.rzone-content {
+    max-width: 500px;
+    text-align: left;
+}
+
+.rzone-content h3 {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.rzone-content p {
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+    .rzone-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rzone-content {
+        text-align: center;
+    }
+}
+.card {
+    background: #111827;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}

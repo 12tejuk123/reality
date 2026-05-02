@@ -1,0 +1,53 @@
+type User @table {
+  email: String!
+  displayName: String!
+  userType: String!
+  createdAt: Timestamp!
+  phoneNumber: String
+  photoUrl: String
+  bio: String
+}
+
+type Property @table {
+  title: String!
+  address: String!
+  city: String!
+  price: Int64!
+  propertyType: String!
+  status: String!
+  bedrooms: Int!
+  bathrooms: Int!
+  areaSqFt: Int!
+  createdAt: Timestamp!
+  description: String
+  yearBuilt: Int
+  amenities: [String]
+  virtualTourLink: String
+  latitude: Float
+  longitude: Float
+  agent: User
+}
+
+type Image @table {
+  imageUrl: String!
+  createdAt: Timestamp!
+  caption: String
+  order: Int
+  property: Property
+}
+
+type Favorite @table(key: ["buyer", "property"]) {
+  createdAt: Timestamp!
+  buyer: User!
+  property: Property!
+}
+
+type Enquiry @table {
+  subject: String!
+  message: String!
+  createdAt: Timestamp!
+  status: String!
+  buyer: User
+  agent: User
+  property: Property
+}
