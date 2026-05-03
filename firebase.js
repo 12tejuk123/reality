@@ -14,9 +14,8 @@ const firebaseConfig = {
 };
 {
   "hosting": {
-    "site": "prealty-final-5a7b2",
-
-    "public": "public",
+    "public": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
     ...
   }
 }
