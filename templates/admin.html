@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>Admin Dashboard</title>
+
+  <link rel="stylesheet"
+  href="../static/style.css">
+
+</head>
+
+<body>
+
+  <section class="admin-section">
+
+    <div class="container">
+
+      <h1 class="section-title">
+        SSP Realty Admin Dashboard
+      </h1>
+
+      <div class="table-container">
+
+        <table>
+
+          <tr>
+
+            <th>ID</th>
+
+            <th>Name</th>
+
+            <th>Email</th>
+
+            <th>Phone</th>
+
+            <th>Message</th>
+
+          </tr>
+
+          {% for inquiry in inquiries %}
+
+          <tr>
+
+            <td>{{ inquiry.id }}</td>
+
+            <td>{{ inquiry.name }}</td>
+
+            <td>{{ inquiry.email }}</td>
+
+            <td>{{ inquiry.phone }}</td>
+
+            <td>{{ inquiry.message }}</td>
+
+          </tr>
+
+          {% endfor %}
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+
+</html>
