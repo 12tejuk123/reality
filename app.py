@@ -58,7 +58,7 @@ create_table()
 @app.route("/")
 def home():
 
-     return "SSP Realty Working!"
+    return render_template("index.html")
 
 
 # =====================================
@@ -128,4 +128,4 @@ def admin():
 # =====================================
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
