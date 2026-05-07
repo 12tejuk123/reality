@@ -58,7 +58,7 @@ create_table()
 @app.route("/")
 def home():
 
-    return render_template("index.html")
+     return "SSP Realty Working!"
 
 
 # =====================================
