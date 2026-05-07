@@ -122,7 +122,10 @@ def admin():
         inquiries=inquiries
     )
 
+BASE_DIR = os.path.dirname(__file__)
+file_path = os.path.join(BASE_DIR, "data.xlsx")
 
+pd.read_excel(file_path)
 # =====================================
 # RUN APP
 # =====================================
